@@ -20,11 +20,6 @@ mongoose.connect("mongodb+srv://ajisaka:ajisaka322@cluster0.tdwoa.mongodb.net/db
   useFindAndModify: false,
 });
 
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
-  next();
-});
-
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 // router admin
