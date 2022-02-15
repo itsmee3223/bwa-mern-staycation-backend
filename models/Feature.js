@@ -1,25 +1,23 @@
-const Mongoose = require("mongoose");
+const mongoose = require("mongoose");
+const { ObjectId } = mongoose.Schema;
 
-const { Schema } = Mongoose;
-const { ObjectId } = Schema;
-
-const featureSchema = new Schema({
+const featureSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: true,
+    required: true
   },
   qty: {
     type: Number,
-    required: true,
+    required: true
   },
   imageUrl: {
     type: String,
-    required: true,
+    required: true
   },
   itemId: {
     type: ObjectId,
-    ref: "Item",
-  },
-});
+    ref: 'Item'
+  }
+})
 
-module.exports = Mongoose.model("Feature", featureSchema);
+module.exports = mongoose.model('Feature', featureSchema)

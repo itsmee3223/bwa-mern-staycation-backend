@@ -6,8 +6,8 @@ const auth = require('../middlewares/auth');
 router.get('/signin', adminController.viewSignin);
 router.post('/signin', adminController.actionSignin);
 router.use(auth);
-router.get('/dashboard', adminController.viewDashboard);
 router.get('/logout', adminController.actionLogout);
+router.get('/dashboard', adminController.viewDashboard);
 // endpoint category
 router.get('/category', adminController.viewCategory);
 router.post('/category', adminController.addCategory);
@@ -36,11 +36,10 @@ router.post('/item/add/activity', uploadSingle, adminController.addActivity);
 router.put('/item/update/activity', uploadSingle, adminController.editActivity);
 router.delete('/item/:itemId/activity/:id', adminController.deleteActivity);
 
-// endpoint booking
-router.get('/booking', adminController.viewBooking)
-router.get('/booking/:id', adminController.showDetailBooking)
-router.put('/booking/:id/confirmation', adminController.actionConfirm)
-router.put('/booking/:id/reject', adminController.actionReject)
 
+router.get('/booking', adminController.viewBooking);
+router.get('/booking/:id', adminController.showDetailBooking);
+router.put('/booking/:id/confirmation', adminController.actionConfirmation);
+router.put('/booking/:id/reject', adminController.actionReject);
 
 module.exports = router;

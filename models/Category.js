@@ -1,19 +1,15 @@
-const Mongoose = require("mongoose");
+const mongoose = require("mongoose");
+const { ObjectId } = mongoose.Schema;
 
-const { Schema } = Mongoose;
-const { ObjectId } = Schema;
-
-const categorySchema = new Schema({
+const categorySchema = new mongoose.Schema({
   name: {
     type: String,
-    required: true,
+    required: true
   },
-  itemId: [
-    {
-      type: ObjectId,
-      ref: "Item",
-    },
-  ],
-});
+  itemId: [{
+    type: ObjectId,
+    ref: 'Item'
+  }]
+})
 
-module.exports = Mongoose.model("Category", categorySchema);
+module.exports = mongoose.model('Category', categorySchema)

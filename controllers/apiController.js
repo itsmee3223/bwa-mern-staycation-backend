@@ -121,12 +121,9 @@ module.exports = {
       return res.status(404).json({ message: "Image not found" });
     }
 
-    console.log(idItem)
-
     if (
       idItem === undefined ||
       duration === undefined ||
-      // price === undefined ||
       bookingStartDate === undefined ||
       bookingEndDate === undefined ||
       firstName === undefined ||

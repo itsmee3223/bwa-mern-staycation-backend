@@ -2,7 +2,6 @@
   <!-- DataTales Example -->
   <div class="card shadow mb-4 mt-2">
     <div class="card-body">
-      
       <div class="row">
         <div class="col-md-5">
           <form action="/admin/item/add/activity" method="POST" enctype="multipart/form-data">
@@ -20,8 +19,9 @@
               <input type="file" class="form-control" name="image" required>
             </div>
             <input type="hidden" value="<%= itemId %>" name="itemId">
-            <a href="/admin/item" class="btn btn-warning">Back</a>
+            <% if(user.role == 'admin') { %>
             <button type="submit" class="btn btn-primary">save</button>
+            <% } %>
           </form>
         </div>
         <div class="col-md-7">
@@ -33,7 +33,9 @@
                   <th>Name</th>
                   <th>Type</th>
                   <th>Image URL</th>
+                  <% if(user.role == 'admin') { %>
                   <th>Action</th>
+                  <% } %>
                 </tr>
               </thead>
               <tbody>
@@ -43,9 +45,10 @@
                   <td><%= activity[i].name %></td>
                   <td><%= activity[i].type %></td>
                   <td>
-                    <img src="https://staycarion-backend.herokuapp.com/<%= activity[i].imageUrl %>" alt="imageUrl"
+                    <img src="https://ramanda-staycation-backend.herokuapp.com//<%= activity[i].imageUrl %>" alt="imageUrl"
                       width="70px">
                   </td>
+                  <% if(user.role == 'admin') { %>
                   <td>
                     <form action="/admin/item/<%= itemId %>/activity/<%= activity[i].id %>?_method=DELETE"
                       method="POST">
@@ -56,6 +59,7 @@
                           class="fas fa-trash"></i></button>
                     </form>
                   </td>
+                  <% } %>
                 </tr>
                 <% } %>
               </tbody>
