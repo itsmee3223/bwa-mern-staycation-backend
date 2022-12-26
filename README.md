@@ -6,7 +6,7 @@ Website Travel
 I bought a course from BWA and learn how to build website using MERN stack technology.
 </p>
 <p align='center'>
-This is the backend api, build with ExpressJS and MongoDB, and deployed with <a href='https://app.netlify.com/' target='_blank'>Railway</a>
+This is the backend api, build with ExpressJS and MongoDB, and deployed with <a href='https://railway.app/' target='_blank'>Railway</a>
 </p>
 
 ---
