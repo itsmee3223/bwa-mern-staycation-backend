@@ -6,15 +6,15 @@ Website Travel
 I bought a course from BWA and learn how to build website using MERN stack technology.
 </p>
 <p align='center'>
-This is the backend api, build with ExpressJS and MongoDB, and deployed with <a href='https://railway.app/' target='_blank'>Railway</a>
+This is the backend api, build with ExpressJS and MongoDB, and deployed with <a href='https://render.com/' target='_blank'>Render</a>
 </p>
 
 ---
 
 
-## 🚀 Link to [Deploy Backend](https://staycation-backend.up.railway.app)
+## 🚀 Link to [Deploy Backend](https://mern-staycation-backend.onrender.com)
 
-## ⚛️ Link to [Frontend](https://github.com/itsmee3223/bwa-mern-staycation-frontend), [Deploy React](https://staycation-frontend-ramanda.netlify.app/)
+## ⚛️ Link to [Frontend](https://github.com/itsmee3223/bwa-mern-staycation-frontend), [Deploy React](https://ramanda-mern-staycation.netlify.app/)
 
 ## 🏫 Link to [Course](https://class.buildwithangga.com/kelas/full-stack-javascript-developer-website-travel?thumbnail=UaLl9ulabm.34&main_leads=searchresult)
 
